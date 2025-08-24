@@ -18,12 +18,14 @@ const Appointments = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  // Fetch doctor info from context
   const fetchDocInfo = () => {
     const doc = doctors.find(d => d.id === Number(docId));
     setDocInfo(doc);
     setLoading(false);
   };
 
+  // Generate slots safely
   const getAvailableSolts = () => {
     if (!docInfo) return;
     let today = new Date();
@@ -50,13 +52,21 @@ const Appointments = () => {
         currentDate.setMinutes(currentDate.getMinutes() + 30);
       }
 
-      allSlots.push(timeSlots);
+      // Safety fallback
+      if (timeSlots.length) {
+        allSlots.push(timeSlots);
+      } else {
+        allSlots.push([{ datetime: new Date(), time: "N/A" }]);
+      }
     }
 
     setDocSolts(allSlots);
   };
 
-  useEffect(() => { if (doctors.length && docId) fetchDocInfo(); }, [doctors, docId]);
+  useEffect(() => {
+    if (doctors.length && docId) fetchDocInfo();
+  }, [doctors, docId]);
+
   useEffect(() => { getAvailableSolts(); }, [docInfo]);
 
   const handleConfirm = () => {
@@ -66,9 +76,8 @@ const Appointments = () => {
     }
     setError('');
     const selectedSlot = docSolts[selectedDayIndex][selectedTimeIndex];
-     setAppointments(prev => [...prev, { doctor: docInfo, slot: selectedSlot }]); // add appointment
+    setAppointments(prev => [...prev, { doctor: docInfo, slot: selectedSlot }]); // add appointment
 
-    // Navigate to My Appointment page and pass selected appointment data
     navigate("/my-appointments", { state: { doctor: docInfo, appointment: selectedSlot } });
   };
 
@@ -80,7 +89,7 @@ const Appointments = () => {
       {/* Doctor Info */}
       <div className="flex flex-col sm:flex-row gap-6">
         <div className="w-full sm:w-1/3">
-          <img className="bg-primary w-full sm:max-w-72 rounded-lg shadow" src={docInfo.image} alt="" />
+          <img className="bg-primary w-full h-full sm:max-w-72 rounded-lg shadow" src={docInfo.image} alt="" />
         </div>
 
         <div className="flex w-full sm:w-2/3 flex-col border border-gray-300 rounded-lg p-6 bg-white gap-3">
@@ -102,10 +111,11 @@ const Appointments = () => {
       </div>
 
       {/* Booking Days */}
-      <div className='ml-80 mt-10'>
+      <div className='md:ml-80 mt-10'>
         <h2 className='font-bold text-xl pl-14'>Appointment Booking</h2>
         <div className="flex gap-4 mt-6 overflow-x-auto pb-2">
-          {docSolts.slice(0,7).map((daySlots,index)=>{
+          {docSolts.slice(0,7).map((daySlots,index) => {
+            if (!daySlots || daySlots.length === 0) return null;
             const dateObj = daySlots[0].datetime;
             const dayName = daysOfWeek[dateObj.getDay()];
             const date = dateObj.getDate();
@@ -124,9 +134,9 @@ const Appointments = () => {
         </div>
 
         {/* Time Slots Horizontal Scroll */}
-        {selectedDayIndex !== null && (
+        {selectedDayIndex !== null && docSolts[selectedDayIndex] && (
           <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
-            {docSolts[selectedDayIndex]?.map((slot,i) => (
+            {docSolts[selectedDayIndex].map((slot,i) => (
               <div 
                 key={i} 
                 onClick={() => setSelectedTimeIndex(i)}
@@ -139,10 +149,8 @@ const Appointments = () => {
           </div>
         )}
 
-        {/* Error Message */}
         {error && <p className="text-red-500 mt-2">{error}</p>}
 
-        {/* Confirm Appointment Button */}
         <button 
           onClick={handleConfirm}
           className="mt-4 px-6 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition"
@@ -150,6 +158,7 @@ const Appointments = () => {
           Book Appointment
         </button>
       </div>
+
       <RelatedDoctors/>
     </div>
   );
