@@ -70,6 +70,14 @@ const SignUp = () => {
           required
          
         />
+          <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="border px-4 py-2 rounded"
+          required
+        />
         <input
           type="tel"
           placeholder="Phone"
@@ -92,14 +100,7 @@ const SignUp = () => {
           onChange={(e) => setImage(e.target.files[0])}
           className="border px-4 py-2 rounded"
         />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="border px-4 py-2 rounded"
-          required
-        />
+      
         <button
           type="submit"
           className="bg-primary text-white px-4 py-2 rounded hover:bg-green-600 transition"
