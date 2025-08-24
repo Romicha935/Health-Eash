@@ -68,7 +68,7 @@ const SignUp = () => {
           onChange={(e) => setEmail(e.target.value)}
           className="border px-4 py-2 rounded"
           required
-          readOnly
+         
         />
         <input
           type="tel"
