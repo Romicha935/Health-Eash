@@ -4,9 +4,12 @@ import { AppContext } from '../Context/AppContext';
 import { MdVerified } from 'react-icons/md';
 import { IoMdInformationCircleOutline } from 'react-icons/io';
 import RelatedDoctors from '../Components/RelatedDoctors';
+import { AuthContext } from '../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Appointments = () => {
   const { docId } = useParams();
+  const {user} = useContext(AuthContext)
   const { doctors, currencySymbol, setAppointments } = useContext(AppContext);
   const navigate = useNavigate();
 
@@ -70,6 +73,10 @@ const Appointments = () => {
   useEffect(() => { getAvailableSolts(); }, [docInfo]);
 
   const handleConfirm = () => {
+      if (!user) {
+    navigate('/login'); // redirect if user not logged in
+    return;
+  }
     if (selectedDayIndex === null || selectedTimeIndex === null) {
       setError("Please select date and time before booking!");
       return;
@@ -78,7 +85,15 @@ const Appointments = () => {
     const selectedSlot = docSolts[selectedDayIndex][selectedTimeIndex];
     setAppointments(prev => [...prev, { doctor: docInfo, slot: selectedSlot }]); // add appointment
 
+     // Show success message
+  Swal.fire({
+    icon: 'success',
+    title: 'Appointment Booked!',
+    text: `Your appointment with Dr. ${docInfo.name} at ${selectedSlot.time} is confirmed.`,
+    showConfirmButton: true,
+  }).then(() => {
     navigate("/my-appointments", { state: { doctor: docInfo, appointment: selectedSlot } });
+  });
   };
 
   if (loading) return <div>Loading...</div>;
