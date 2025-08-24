@@ -1,93 +1,167 @@
-
- [
-    {
-      "id":1,
-      "name": "Dr. Arif Hossain",
-      "image": "https://i.ibb.co.com/WKWVDSK/top-Doctor1-removebg-preview.png",
-      "speciality": "General Physician"
-    },
-    {
-      "id":2,
-      "name": "Dr. Nusrat Jahan",
-      "image": "https://i.ibb.co.com/n3dKf2w/top-Doctor2-removebg-preview.png",
-      "speciality": "Gynecologist"
-    },
-    {
-      "id":3,
-      "name": "Dr. Shakil Ahmed",
-      "image": "https://i.ibb.co.com/r2CS1yy/top-Doctor3-removebg-preview.png",
-      "speciality": "Dermatologist"
-    },
-    {
-      "id":4,
-      "name": "Dr. Tanvir Rahman",
-      "image": "https://i.ibb.co.com/yXqHj5f/top-Doctor4-removebg-preview.png",
-      "speciality": "Padiatricians"
-    },
-    {
-      "id":5,
-      "name": "Dr. Moinul Islam",
-      "image": "https://i.ibb.co.com/09TrJ0f/top-Doctor5-removebg-preview.png",
-      "speciality": "Neurologist"
-    },
-    {
-      "id":6,
-      "name": "Dr. Habib Ullah",
-      "image": "https://i.ibb.co.com/vXkDC0S/top-Doctor6-removebg-preview.png",
-      "speciality": "Gastroenterologist"
-    },
-    {
-      "id":7,
-      "name": "Dr. Fatima Akter",
-      "image": "https://i.ibb.co.com/DCZNRkW/top-Doctor7-removebg-preview.png",
-      "speciality": "General Physician"
-    },
-    {
-      "id":8,
-      "name": "Dr. Salma Khatun",
-      "image": "https://i.ibb.co.com/Jtb44qv/top-Doctor8-removebg-preview.png",
-      "speciality": "Gynecologist"
-    },
-    {
-      "id":9,
-      "name": "Dr. Asif Hasan",
-      "image": "https://i.ibb.co.com/LtkBwLZ/top-Doctor9-removebg-preview.png",
-      "speciality": "Dermatologist"
-    },
-    {
-      "id":10,
-      "name": "Dr. Faria Haque",
-      "image": "https://i.ibb.co.com/jryywXw/top-Doctor10-removebg-preview.png",
-      "speciality": "Padiatricians"
-    },
-    {
-      "id":11,
-      "name": "Dr. Kamrul Islam",
-      "image": "https://i.ibb.co.com/1RfC9mJ/top-Doctor11-removebg-preview.png",
-      "speciality": "Neurologist"
-    },
-    {
-      "id":12,
-      "name": "Dr. Mahmudul Hasan",
-      "image": "https://i.ibb.co.com/yPYKtZm/top-Doctor12-removebg-preview.png",
-      "speciality": "Gastroenterologist"
-    },
-    {
-      "id":13,
-      "name": "Dr. Sabrina Islam",
-      "image": "https://i.ibb.co.com/cL8Gf2M/top-Doctor13-removebg-preview.png",
-      "speciality": "General Physician"
-    },
-    {
-      "id":14,
-      "name": "Dr. Rezaul Karim",
-      "image": "https://i.ibb.co.com/png4pCd/top-Doctor14-removebg-preview.png",
-      "speciality": "Gynecologist"
-    },
-    {
-      "id":15,
-      "name": "Dr. Sohana Rahman",
-      "image": "https://i.ibb.co.com/FhsnLkc/top-Doctor15-removebg-preview.png",
-      "speciality": "Dermatologist"
-    }
-  ]
+[
+  {
+    "id": 1,
+    "name": "Dr. Arif Hossain",
+    "image": "https://i.ibb.co.com/WKWVDSK/top-Doctor1-removebg-preview.png",
+    "speciality": "General Physician",
+    "degree": "MBBS, MD",
+    "experience": "10 years",
+    "about": "Dr. Arif Hossain is an expert in general health and preventive care, committed to ensuring patient well-being through comprehensive medical services and preventive strategies. He focuses on holistic treatment approaches and early diagnosis for optimal health outcomes.",
+    "appointmentFee": 500,
+    "address": "House 12, Green Road, Dhaka, Bangladesh"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Nusrat Jahan",
+    "image": "https://i.ibb.co.com/n3dKf2w/top-Doctor2-removebg-preview.png",
+    "speciality": "Gynecologist",
+    "degree": "MBBS, FCPS",
+    "experience": "8 years",
+    "about": "Dr. Nusrat Jahan specializes in women's health, pregnancy, and reproductive care. She is dedicated to providing compassionate care and evidence-based treatments, ensuring the health and safety of both mother and child throughout the pregnancy journey.",
+    "appointmentFee": 700,
+    "address": "Flat 5B, Banani, Dhaka, Bangladesh"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Shakil Ahmed",
+    "image": "https://i.ibb.co.com/r2CS1yy/top-Doctor3-removebg-preview.png",
+    "speciality": "Dermatologist",
+    "degree": "MBBS, DDV",
+    "experience": "12 years",
+    "about": "Dr. Shakil Ahmed focuses on skin care, dermatology treatments, and cosmetic procedures. He provides personalized care plans for acne, eczema, and other skin conditions, helping patients maintain healthy and radiant skin.",
+    "appointmentFee": 600,
+    "address": "Road 22, Dhanmondi, Dhaka, Bangladesh"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Tanvir Rahman",
+    "image": "https://i.ibb.co.com/yXqHj5f/top-Doctor4-removebg-preview.png",
+    "speciality": "Padiatricians",
+    "degree": "MBBS, MD Pediatrics",
+    "experience": "9 years",
+    "about": "Dr. Tanvir Rahman is a caring pediatrician specializing in child health and development. He ensures a child-friendly approach to medical care, focusing on preventive medicine, vaccinations, and overall growth monitoring.",
+    "appointmentFee": 550,
+    "address": "House 45, Uttara, Dhaka, Bangladesh"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Moinul Islam",
+    "image": "https://i.ibb.co.com/09TrJ0f/top-Doctor5-removebg-preview.png",
+    "speciality": "Neurologist",
+    "degree": "MBBS, MD Neurology",
+    "experience": "11 years",
+    "about": "Dr. Moinul Islam is an experienced neurologist treating a wide range of neurological disorders including headaches, epilepsy, and neurodegenerative diseases. He emphasizes early diagnosis and personalized treatment for better patient outcomes.",
+    "appointmentFee": 800,
+    "address": "House 9, Mirpur, Dhaka, Bangladesh"
+  },
+  {
+    "id": 6,
+    "name": "Dr. Habib Ullah",
+    "image": "https://i.ibb.co.com/vXkDC0S/top-Doctor6-removebg-preview.png",
+    "speciality": "Gastroenterologist",
+    "degree": "MBBS, FCPS",
+    "experience": "10 years",
+    "about": "Dr. Habib Ullah is an expert in digestive system health and gastrointestinal diseases. He focuses on providing accurate diagnosis, modern treatment approaches, and personalized care plans for his patients.",
+    "appointmentFee": 650,
+    "address": "Street 7, Gulshan, Dhaka, Bangladesh"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Fatima Akter",
+    "image": "https://i.ibb.co/DCZNRkW/top-Doctor7-removebg-preview.png",
+    "speciality": "General Physician",
+    "degree": "MBBS, MD",
+    "experience": "7 years",
+    "about": "Dr. Fatima Akter is dedicated to preventive care and holistic treatment for patients. She emphasizes wellness, lifestyle modifications, and early intervention to maintain optimal health.",
+    "appointmentFee": 500,
+    "address": "House 18, Banani, Dhaka, Bangladesh"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Salma Khatun",
+    "image": "https://i.ibb.co/Jtb44qv/top-Doctor8-removebg-preview.png",
+    "speciality": "Gynecologist",
+    "degree": "MBBS, FCPS",
+    "experience": "9 years",
+    "about": "Dr. Salma Khatun focuses on women's reproductive health and prenatal care. She ensures patient comfort and safety while providing guidance on pregnancy, childbirth, and postnatal care.",
+    "appointmentFee": 700,
+    "address": "Road 10, Dhanmondi, Dhaka, Bangladesh"
+  },
+  {
+    "id": 9,
+    "name": "Dr. Asif Hasan",
+    "image": "https://i.ibb.co/LtkBwLZ/top-Doctor9-removebg-preview.png",
+    "speciality": "Dermatologist",
+    "degree": "MBBS, DDV",
+    "experience": "8 years",
+    "about": "Dr. Asif Hasan specializes in skin treatment, acne management, and cosmetic dermatology. He provides advanced skin care treatments for patients seeking both medical and aesthetic solutions.",
+    "appointmentFee": 600,
+    "address": "House 33, Mohammadpur, Dhaka, Bangladesh"
+  },
+  {
+    "id": 10,
+    "name": "Dr. Faria Haque",
+    "image": "https://i.ibb.co/jryywXw/top-Doctor10-removebg-preview.png",
+    "speciality": "Padiatricians",
+    "degree": "MBBS, MD Pediatrics",
+    "experience": "6 years",
+    "about": "Dr. Faria Haque is passionate about child care and pediatric health services. She offers preventive check-ups, immunizations, and personalized care plans for children's growth and well-being.",
+    "appointmentFee": 550,
+    "address": "Flat 12A, Uttara, Dhaka, Bangladesh"
+  },
+  {
+    "id": 11,
+    "name": "Dr. Kamrul Islam",
+    "image": "https://i.ibb.co/1RfC9mJ/top-Doctor11-removebg-preview.png",
+    "speciality": "Neurologist",
+    "degree": "MBBS, MD Neurology",
+    "experience": "12 years",
+    "about": "Dr. Kamrul Islam is an expert in brain and nervous system disorders. He emphasizes accurate diagnosis, advanced treatment options, and rehabilitation for patients with neurological conditions.",
+    "appointmentFee": 800,
+    "address": "House 21, Gulshan, Dhaka, Bangladesh"
+  },
+  {
+    "id": 12,
+    "name": "Dr. Mahmudul Hasan",
+    "image": "https://i.ibb.co/yPYKtZm/top-Doctor12-removebg-preview.png",
+    "speciality": "Gastroenterologist",
+    "degree": "MBBS, FCPS",
+    "experience": "9 years",
+    "about": "Dr. Mahmudul Hasan specializes in digestive health and liver diseases. He focuses on patient-centered care with thorough evaluation, treatment planning, and lifestyle guidance for gastrointestinal wellness.",
+    "appointmentFee": 650,
+    "address": "Road 14, Banani, Dhaka, Bangladesh"
+  },
+  {
+    "id": 13,
+    "name": "Dr. Sabrina Islam",
+    "image": "https://i.ibb.co/cL8Gf2M/top-Doctor13-removebg-preview.png",
+    "speciality": "General Physician",
+    "degree": "MBBS, MD",
+    "experience": "5 years",
+    "about": "Dr. Sabrina Islam is focused on preventive medicine and general health improvement. She combines modern diagnostic techniques with patient education for long-term wellness.",
+    "appointmentFee": 500,
+    "address": "House 50, Mohammadpur, Dhaka, Bangladesh"
+  },
+  {
+    "id": 14,
+    "name": "Dr. Rezaul Karim",
+    "image": "https://i.ibb.co/png4pCd/top-Doctor14-removebg-preview.png",
+    "speciality": "Gynecologist",
+    "degree": "MBBS, FCPS",
+    "experience": "7 years",
+    "about": "Dr. Rezaul Karim is experienced in pregnancy care and women's health services. He emphasizes individualized treatment plans and compassionate care for all patients.",
+    "appointmentFee": 700,
+    "address": "House 28, Dhanmondi, Dhaka, Bangladesh"
+  },
+  {
+    "id": 15,
+    "name": "Dr. Sohana Rahman",
+    "image": "https://i.ibb.co/FhsnLkc/top-Doctor15-removebg-preview.png",
+    "speciality": "Dermatologist",
+    "degree": "MBBS, DDV",
+    "experience": "10 years",
+    "about": "Dr. Sohana Rahman specializes in skin treatments, dermatology, and cosmetic procedures. She provides customized care for skin health, aesthetic improvement, and patient satisfaction.",
+    "appointmentFee": 600,
+    "address": "Road 5, Gulshan, Dhaka, Bangladesh"
+  }
+]
