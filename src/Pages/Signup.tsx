@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const { signUp, signUpWithGoogle } = useContext(AuthContext);
+  const { signUp, loginWithGoogle } = useContext(AuthContext);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ const SignUp = () => {
 
   const handleGoogleSignUp = async () => {
     try {
-      await signUpWithGoogle();
+      await loginWithGoogle();
       navigate('/');
     } catch (err) {
       setError(err.message);
